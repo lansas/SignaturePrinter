@@ -1,6 +1,6 @@
 {
   "name": "SignaturePrinter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple Cordova plugin for printing text and signature via Bluetooth printer",
   "cordova": {
     "id": "com.iigservices.cordova.plugin",
