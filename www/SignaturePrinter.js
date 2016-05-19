@@ -4,10 +4,8 @@ window.initPrinter = function(printer, callbackSuccess,callbackError) {
 window.printSignature = function(image,width,height, callbackSuccess,callbackError) {
     cordova.exec(callbackSuccess, callbackError, "SignaturePrinter", "printSignature", [image,width,height]);
 };
-window.printText = function(message, callback) {
-    cordova.exec(callback, function(err) {
-        console.log("Error while printText: "+err);
-    }, "SignaturePrinter", "printText", [message]);
+window.printText = function(message, callbackSuccess,callbackError) {
+    cordova.exec(callbackSuccess, callbackError, "SignaturePrinter", "printText", [message]);
 };
 window.closePrinterConnection = function(callback) {
     cordova.exec(callback, function(err) {
