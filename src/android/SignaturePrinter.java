@@ -84,6 +84,18 @@ public class SignaturePrinter extends CordovaPlugin {
                 callbackContext.error("Error in execute().printSignature():Message "+e.getMessage());
             }
         }
+        if(action.equals("closeConnection"))
+        {
+            try{
+                
+                this.closeConnection(callbackContext);
+                return true;
+            }
+            catch(Exception e)
+            {
+                callbackContext.error("Error in execute().print():Message "+e.getMessage());
+            }
+        }
         return false;
     }
     
@@ -149,6 +161,15 @@ public class SignaturePrinter extends CordovaPlugin {
             }
         }
         return result;
+    }
+    private void closeConnection(CallbackContext callbackContext){
+        try{
+                closeBT(callbackContext);
+                callbackContext.success("Connection closed successfully");
+            }
+            catch(Exception e){
+                callbackContext.error("Error in closeConnection():Message "+e.getMessage());
+            }
     }
     private void printImage(int[][] pixels,OutputStream printPort,CallbackContext callbackContext) {
     // Set the line spacing at 24 (we'll print 24 dots high)

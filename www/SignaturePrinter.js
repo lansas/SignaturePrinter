@@ -11,3 +11,8 @@ window.printText = function(message, callback) {
         console.log("Error while printText: "+err);
     }, "SignaturePrinter", "printText", [message]);
 };
+window.closePrinterConnection = function(callback) {
+    cordova.exec(callback, function(err) {
+        console.log("Error while printText: "+err);
+    }, "SignaturePrinter", "closeConnection", []);
+};
