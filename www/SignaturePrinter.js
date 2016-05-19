@@ -1,7 +1,5 @@
-window.initPrinter = function(printer, callback) {
-    cordova.exec(callback, function(err) {
-        console.log("Error while initPrinter: "+err);
-    }, "SignaturePrinter", "initPrinter", [printer]);
+window.initPrinter = function(printer, callbackSuccess,callbackError) {
+    cordova.exec(callbackSuccess,callbackError, "SignaturePrinter", "initPrinter", [printer]);
 };
 window.printSignature = function(image,width,height, callback) {
     cordova.exec(callback, function(err) {
