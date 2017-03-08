@@ -1,4 +1,5 @@
 # SignaturePrinter
+  Simple plugin for Apache Cordova for printing text and images via Bluetooth POS Printers
 # Installation
   cordova plugin add SignaturePrinter
 # Usage
